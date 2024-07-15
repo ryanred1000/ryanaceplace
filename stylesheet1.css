@@ -1,0 +1,24 @@
+header {
+    width: 1000px;
+    margin: auto;
+    background-color: black;
+}
+
+.whiteText {
+    color: white;
+}
+
+#rainbowSpan {
+    animation-name: rainbowAnimation;
+}
+
+@keyframes rainbowAnimation {
+    from {color: red;}
+    to {color: orange;}
+    to {color: yellow;}
+    to {color: green;}
+    to {color: aqua;}
+    to {color: blue;}
+    to {color: indigo;}
+    to {color: violet;}
+}
