@@ -1,3 +1,8 @@
+#blackBar {
+    padding: 100px;
+    background-color: black;
+}
+
 header {
     width: 1000px;
     padding: auto;
