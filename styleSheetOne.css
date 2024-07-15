@@ -1,6 +1,6 @@
 header {
     width: 1000px;
-    margin: auto;
+    padding: auto;
     background-color: black;
 }
 
@@ -10,6 +10,7 @@ header {
 
 #rainbowSpan {
     animation-name: rainbowAnimation;
+    animation-duration: 4s;
 }
 
 @keyframes rainbowAnimation {
