@@ -8,7 +8,7 @@ header {
     color: white;
 }
 
-#rainbowSpan {
+.whiteText #rainbowSpan {
     animation-name: rainbowAnimation;
     animation-duration: 4s;
     animation-direction: alternate;
