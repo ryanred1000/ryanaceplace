@@ -12,6 +12,7 @@ header h1 .rainbowSpan {
     animation-name: rainbowAnimation;
     animation-duration: 4s;
     /*animation-direction: alternate;*/
+    animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
