@@ -16,7 +16,7 @@ header h1 .whiteText .rainbowSpan {
 }
 
 @keyframes rainbowAnimation {
-    0% {color: red;}
+    from {color: red;}
     14% {color: orange;}
     28% {color: yellow;}
     42% {color: green;}
