@@ -11,15 +11,17 @@ header {
 #rainbowSpan {
     animation-name: rainbowAnimation;
     animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
 
 @keyframes rainbowAnimation {
-    from {color: red;}
-    to {color: orange;}
-    to {color: yellow;}
-    to {color: green;}
-    to {color: aqua;}
-    to {color: blue;}
-    to {color: indigo;}
-    to {color: violet;}
+    0% {color: red;}
+    14% {color: orange;}
+    28% {color: yellow;}
+    42% {color: green;}
+    57% {color: aqua;}
+    71% {color: blue;}
+    85% {color: indigo;}
+    100% {color: violet;}
 }
