@@ -1,12 +1,46 @@
-#blackBar {
-    padding: 100px;
+#changingBackground {
     background-color: black;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    padding: auto;
+    animation-name: fadingBackground;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#blackBar {
+    padding: 23% 0%;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    background-color: rgb(25, 25, 25);
+    display: flex;
+    justify-content: center;
+    animation-name: resizingDiv;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
 }
 
 header {
-    width: 1000px;
+    width: auto;
     padding: auto;
-    background-color: black;
+}
+
+header h1 {
+    animation-name: fadingText;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .whiteText {
@@ -19,6 +53,21 @@ header h1 .rainbowSpan {
     animation-direction: alternate;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+}
+
+@keyframes fadingBackground {
+    from {background-color: rgb(49, 51, 56);}
+    to {background-color: white;}
+}
+
+@keyframes resizingDiv {
+    from {padding: 23% 0%;}
+    to {padding: 2% 0%;}
+}
+
+@keyframes fadingText {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 @keyframes rainbowAnimation {
