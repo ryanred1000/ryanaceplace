@@ -47,6 +47,7 @@ header h1 {
     animation-timing-function: linear;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    text-align: center;
 }
 
 .whiteText {
