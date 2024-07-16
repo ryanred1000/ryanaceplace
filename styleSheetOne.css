@@ -1,5 +1,5 @@
 body {
-    font-family: 'JetBrains Mono';font-size: 22px;
+    font-family: 'JetBrains Mono';
     color: white;
 }
 
@@ -26,14 +26,22 @@ div.content {
     justify-content: center;
     position: relative;
     border-radius: 5vw;
-    padding: 2vh 0vw;
+    padding: 0vh 3vw 0vh 3vw;
     margin: 2vh 2vw;
     animation: none;
+    flex-direction: row;
+}
+
+div.content > * {
+    text-align: center;
+    align-items: center;
+    padding: 2vh;
+    font-size: 3vh;
 }
 
 #topBar {
     display: block;
-    padding: 44.7vh 0vw;
+    padding: 42.7vh 0vw;
     border-radius: 0vw;
     margin: 0vh 0vw;
     opacity: 1;
@@ -73,13 +81,30 @@ header h1 .rainbowSpan {
     animation-iteration-count: infinite;
 }
 
+h2 {
+    font-size: 3vh;
+}
+
+#aboutMeTitleDiv {
+    padding-right: 3.5vw;
+}
+
+#cutoutDiv {
+    position: sticky;
+    bottom: 100px;
+    left: 5vw;
+    width: 50px;
+    height: auto;
+    background-color: rgb(64, 64, 64);
+}
+
 @keyframes fadingBackground {
     from {background-color: rgb(25, 25, 25);}
     to {background-color: rgb(64, 64, 64);}
 }
 
 @keyframes resizingDiv {
-    from {padding: 44.7vh 0vw;}
+    from {padding: 42.7vh 0vw;}
     to {border-radius: 5vw; padding: 2vh 0vw; margin: 2vh 2vw;}
 }
 
@@ -88,10 +113,7 @@ header h1 .rainbowSpan {
     to {opacity: 1;}
 }
 
-@keyframes appearingContent {
-    from {display: none; opacity: 0;}
-    to {display: block; opacity: 1;}
-}
+
 
 @keyframes rainbowAnimation {
     0% {color: red;}
