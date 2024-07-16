@@ -1,5 +1,6 @@
 body {
     font-family: 'JetBrains Mono';font-size: 22px;
+    color: white;
 }
 
 #changingBackground {
@@ -17,22 +18,36 @@ body {
     animation-fill-mode: forwards;
 }
 
-#blackBar {
-    /* padding: 22.64% 0%; */
+div.content {
+    background-color: rgb(25, 25, 25);
+    display: none;
+    opacity: 0;
+    transition: opacity 1s linear;
+    justify-content: center;
+    position: relative;
+    border-radius: 5vw;
+    padding: 2vh 0vw;
+    margin: 2vh 2vw;
+    animation: none;
+}
+
+#topBar {
+    display: block;
     padding: 44.7vh 0vw;
-    position: absolute;
+    border-radius: 0vw;
+    margin: 0vh 0vw;
+    opacity: 1;
     left: 0;
     right: 0;
     top: 0;
     background-color: rgb(25, 25, 25);
-    display: flex;
-    justify-content: center;
     animation-name: resizingDiv;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-delay: 3s;
+    visibility: visible;
 }
 
 header {
@@ -50,10 +65,6 @@ header h1 {
     text-align: center;
 }
 
-.whiteText {
-    color: white;
-}
-
 header h1 .rainbowSpan {
     animation-name: rainbowAnimation;
     animation-duration: 4s;
@@ -67,19 +78,19 @@ header h1 .rainbowSpan {
     to {background-color: rgb(64, 64, 64);}
 }
 
-/* @keyframes resizingDiv {
-    from {padding: 22.64% 0%;}
-    to {padding: 2% 0%;}
-} */
-
 @keyframes resizingDiv {
     from {padding: 44.7vh 0vw;}
-    to {padding: 2vh 0vw;}
+    to {border-radius: 5vw; padding: 2vh 0vw; margin: 2vh 2vw;}
 }
 
 @keyframes fadingText {
     from {opacity: 0;}
     to {opacity: 1;}
+}
+
+@keyframes appearingContent {
+    from {display: none; opacity: 0;}
+    to {display: block; opacity: 1;}
 }
 
 @keyframes rainbowAnimation {
