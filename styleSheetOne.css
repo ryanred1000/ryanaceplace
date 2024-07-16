@@ -1,24 +1,29 @@
+body {
+    font-family: 'JetBrains Mono';font-size: 22px;
+}
+
 #changingBackground {
-    background-color: black;
+    background-color: rgb(25, 25, 25);
     position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    bottom: 0px;
-    padding: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
     animation-name: fadingBackground;
-    animation-duration: 3s;
+    animation-duration: 5;
     animation-timing-function: linear;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
 #blackBar {
-    padding: 23% 0%;
+    /* padding: 22.64% 0%; */
+    padding: 44.7vh 0vw;
     position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 0px;
+    left: 0;
+    right: 0;
+    top: 0;
     background-color: rgb(25, 25, 25);
     display: flex;
     justify-content: center;
@@ -36,6 +41,7 @@ header {
 }
 
 header h1 {
+    font-size: 4vh;
     animation-name: fadingText;
     animation-duration: 2s;
     animation-timing-function: linear;
@@ -56,13 +62,18 @@ header h1 .rainbowSpan {
 }
 
 @keyframes fadingBackground {
-    from {background-color: rgb(49, 51, 56);}
-    to {background-color: white;}
+    from {background-color: rgb(25, 25, 25);}
+    to {background-color: rgb(64, 64, 64);}
 }
 
-@keyframes resizingDiv {
-    from {padding: 23% 0%;}
+/* @keyframes resizingDiv {
+    from {padding: 22.64% 0%;}
     to {padding: 2% 0%;}
+} */
+
+@keyframes resizingDiv {
+    from {padding: 44.7vh 0vw;}
+    to {padding: 2vh 0vw;}
 }
 
 @keyframes fadingText {
