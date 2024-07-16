@@ -1,8 +1,9 @@
 function updateTime() {
     var startDate = new Date("2006-8-19").getTime();
     var now = new Date().getTime();
-    var ageDate = new Date(now - startDate);
-    var yearsElapsed = Math.abs(ageDate.getUTCFullYear() - 1970);
+    
+    var timeDiff = now - startDate;
+    var yearsElapsed = timeDiff / (1000 * 60 * 60 * 24 * 365.25); // Convert milliseconds to years
     
     var years = Math.floor(yearsElapsed);
     
