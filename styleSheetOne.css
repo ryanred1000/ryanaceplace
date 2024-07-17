@@ -85,15 +85,28 @@ h2 {
     font-size: 3vh;
 }
 
-#aboutMeTitleDiv {
-    padding-right: 3.5vw;
+#aboutMeTitleDiv:hover ~ #arrowDivOne {
+    animation-name: learnMoreAnimation;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.arrowDiv {
+    width: 3.5vw;
+    /* display: none; */
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s linear;
+    /* make, DINGUS */
 }
 
 #cutoutDiv {
     position: sticky;
     bottom: 100px;
     left: 5vw;
-    width: 50px;
+    width: 3.5vw;
     height: auto;
     background-color: rgb(64, 64, 64);
 }
@@ -113,8 +126,6 @@ h2 {
     to {opacity: 1;}
 }
 
-
-
 @keyframes rainbowAnimation {
     0% {color: red;}
     14% {color: orange;}
@@ -124,4 +135,10 @@ h2 {
     71% {color: blue;}
     85% {color: indigo;}
     100% {color: violet;}
+}
+
+@keyframes learnMoreAnimation {
+    from {display: none; left: 0vw; opacity: 0;}
+    33% {display: flex; left: 1vw; opacity: .33;}
+
 }

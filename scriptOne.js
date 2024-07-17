@@ -1,5 +1,5 @@
 window.onload = function() {
-    setTimeout(makeVisible, 5000); // 5000 milliseconds = 5 seconds
+    setTimeout(makeVisible, 5000);
 }
 
 function makeVisible() {
@@ -8,14 +8,18 @@ function makeVisible() {
         if(divs[i].id !== 'topBar') {
             divs[i].style.display = "flex";
             for (let j = 0; j < divs[i].children.length; j++) {
-                divs[i].children[j].style.display = "flex";
+                if (divs[i].children[j].className !== 'arrowDiv')
+                    divs[i].children[j].style.display = "flex";
             }            
             setTimeout(function() {
                 divs[i].style.opacity = "1";
                 for (let j = 0; j < divs[i].children.length; j++) {
-                    divs[i].children[j].style.opacity = 1;
+                    if (divs[i].children[j].className !== 'arrowDiv')
+                        divs[i].children[j].style.opacity = 1;
                 }                
             }, 100 + i * 1000);
         }
     }   
 }
+
+// FIX, DINGUS
